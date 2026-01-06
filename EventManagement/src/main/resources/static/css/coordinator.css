@@ -1,0 +1,171 @@
+@charset "ISO-8859-1";
+/* ================= DASHBOARD TITLE ================= */
+.dashboard-title {
+    font-weight: 700;
+    animation: fadeDown 0.8s ease;
+}
+
+/* ================= CREATE BUTTON ================= */
+.btn-create {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    border-radius: 30px;
+    padding: 8px 18px;
+    transition: all 0.3s ease;
+}
+
+.btn-create:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #4338ca, #4f46e5);
+}
+
+/* ================= STAT CARDS ================= */
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeUp 0.9s ease;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+}
+
+.stat-card.blue {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.stat-card.green {
+    background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+}
+
+/* ================= EVENT CARDS ================= */
+.coordinator-event-card {
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 0.9s ease;
+}
+
+.coordinator-event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+    font-weight: 600;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= CREATE EVENT CARD ================= */
+.create-event-card {
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+    animation: fadeUp 0.9s ease;
+}
+
+/* ================= FORM INPUTS ================= */
+.create-event-card .form-control {
+    border-radius: 10px;
+    padding: 10px 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-event-card .form-control:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 0.15rem rgba(99,102,241,0.25);
+}
+
+/* ================= LABELS ================= */
+.create-event-card .form-label {
+    font-weight: 500;
+}
+
+/* ================= BUTTON ANIMATION ================= */
+.create-event-card button,
+.create-event-card a.btn {
+    transition: transform 0.3s ease;
+}
+
+.create-event-card button:hover,
+.create-event-card a.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= MANAGE EVENTS CARD ================= */
+.manage-events-card {
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+    animation: fadeUp 0.9s ease;
+    overflow: hidden;
+}
+
+/* ================= TABLE HEADER ================= */
+.table-header {
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
+    color: white;
+}
+
+.table-header th {
+    padding: 14px;
+    font-weight: 600;
+}
+
+/* ================= TABLE ROW HOVER ================= */
+.event-row {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.event-row:hover {
+    background-color: #f8f9ff;
+    transform: scale(1.01);
+}
+
+/* ================= STATUS BADGES ================= */
+.status-pending {
+    background-color: #facc15;
+    color: #000;
+}
+
+.status-approved {
+    background-color: #22c55e;
+}
+
+.status-rejected {
+    background-color: #ef4444;
+}
+
+/* ================= ACTION BUTTON ================= */
+.action-btn {
+    transition: transform 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}

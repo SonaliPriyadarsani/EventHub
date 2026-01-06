@@ -1,0 +1,167 @@
+/* GLOBAL */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f7fb;
+}
+
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+/* HEADER */
+.main-header {
+    background: #1e293b;
+}
+
+.navbar .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.col-lg-6
+{
+	    animation: float 4s ease-in-out infinite;
+}
+.logo {
+    height: 55px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.brand-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    padding: 80px 0;
+}
+
+.hero-image {
+    animation: float 6s ease-in-out infinite;
+    height: 260px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 12px;
+    width: 550px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* IMAGE BOXES */
+.about-image,
+.why-image,
+.contact-image {
+    height: 260px;
+    background: #e5e7eb;
+    border-radius: 12px;
+}
+
+.feature-image {
+    height: 180px;           /* adjust as needed */
+    width: 100%;
+    background: #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;        /* IMPORTANT */
+}
+
+/* image fills the container */
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* fills div without distortion */
+    display: block;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.feature-card:hover .feature-image {
+    background: #2563eb;
+}
+
+.team-image {
+    height: 120px;
+    width : 220px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* CARDS */
+.feature-card,
+.event-card,
+.team-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-card:hover .team-image {
+    background: #2563eb;
+}
+
+section {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* WHY */
+.why-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.why-list li {
+    margin-bottom: 10px;
+}
+
+.why {
+	width: 550px;
+	height: 260px;
+}
+/* FOOTER */
+.footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer:hover {
+    letter-spacing: 0.5px;
+}

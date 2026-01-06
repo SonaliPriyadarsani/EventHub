@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Coordinator Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Coordinator CSS -->
+    <link rel="stylesheet" th:href="@{/css/coordinator.css}">
+</head>
+<body>
+
+<!-- HEADER -->
+<div th:replace="fragments/header"></div>
+
+<div class="container my-5">
+
+    <!-- PAGE TITLE -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="dashboard-title">Coordinator Dashboard</h2>
+        <a th:href="@{/coordinator/create-event}" class="btn btn-create">
+            + Create Event
+        </a>
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="stat-card">
+                <h5>Total Events</h5>
+                <h2 th:text="${events.size()}">0</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card blue">
+                <h5>Active Events</h5>
+                <h2 th:text="${events.size()}">0</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card green">
+                <h5>Status</h5>
+                <h2>Coordinator</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- MY EVENTS -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="section-title">My Events</h4>
+        <a th:href="@{/coordinator/manage-events}" class="btn btn-outline-dark">
+            Manage Events
+        </a>
+    </div>
+
+    <!-- EVENT CARDS -->
+    <div class="row g-4">
+        <div class="col-md-4" th:each="event : ${events}">
+            <div class="card coordinator-event-card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title" th:text="${event.title}">Event Title</h5>
+
+                    <p class="mb-1">
+                        <b>Date:</b>
+                        <span th:text="${event.date}">01-Jan-2026</span>
+                    </p>
+
+                    <p class="mb-3">
+                        <b>Status:</b>
+                        <span class="badge bg-info text-dark"
+                              th:text="${event.status}">Upcoming</span>
+                    </p>
+
+                    <div class="mt-auto d-flex gap-2">
+                        <a th:href="@{'/coordinator/edit-event/' + ${event.id}}"
+                           class="btn btn-sm btn-outline-primary w-100">
+                            Edit
+                        </a>
+                        <a th:href="@{'/coordinator/view-registrations/' + ${event.id}}"
+                           class="btn btn-sm btn-outline-secondary w-100">
+                            Registrations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div class="col-12" th:if="${events.isEmpty()}">
+            <p class="text-center text-muted fs-5">
+                You haven’t created any events yet.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div th:replace="fragments/footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

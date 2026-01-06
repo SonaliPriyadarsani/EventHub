@@ -1,0 +1,189 @@
+@charset "ISO-8859-1";
+/* ================= ADMIN TITLE ================= */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-content {
+    flex: 1; /* takes up remaining space */
+}
+
+
+.admin-title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+
+.admin-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* ================= ADMIN CARDS ================= */
+.admin-card {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 0.9s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+/* ================= ICON CIRCLE ================= */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* ================= CARD TEXT ================= */
+.admin-card h5 {
+    font-weight: 600;
+}
+
+.admin-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* ================= FADE ANIMATION ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= EMPTY STATE ================= */
+.empty-state {
+    animation: fadeUp 0.8s ease;
+}
+
+.empty-img {
+    width: 280px;
+    opacity: 0.85;
+}
+
+/* ================= ADMIN TABLE ================= */
+.admin-table th {
+    background: #111827;
+    color: white;
+    border: none;
+}
+
+.admin-table td {
+    vertical-align: middle;
+}
+
+/* ================= APPROVE BUTTON ================= */
+.approve-btn {
+    transition: all 0.3s ease;
+}
+
+.approve-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ================= CARD ANIMATION ================= */
+.admin-card {
+    animation: fadeUp 0.7s ease;
+}
+
+/* ================= ADMIN TABLE ================= */
+.admin-table th {
+    background: #111827;
+    color: white;
+    border: none;
+}
+
+.admin-table td {
+    vertical-align: middle;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.action-btn {
+    margin: 2px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ================= PAGE ANIMATION ================= */
+.admin-card {
+    animation: fadeUp 0.7s ease;
+}
+
+/* ================= ADMIN REPORTS ================= */
+
+.admin-stat-card {
+    padding: 35px 20px;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 0.8s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+img 
+{
+	height: 140px;
+	width: 300px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

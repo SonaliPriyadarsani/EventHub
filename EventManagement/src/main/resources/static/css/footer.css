@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+/* ================= FOOTER ================= */
+
+.main-footer {
+    background: #0f172a;
+    color: #cbd5f5;
+    text-align: center;
+    font-size: 20px;
+        padding: 5px 0;
+            flex-shrink: 0; /* do not shrink */
+        
+        
+}

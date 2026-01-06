@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Event</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Coordinator CSS -->
+    <link rel="stylesheet" th:href="@{/css/coordinator.css}">
+</head>
+<body>
+
+<!-- HEADER -->
+<div th:replace="fragments/header"></div>
+
+<div class="container my-5">
+
+    <!-- PAGE HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="dashboard-title">Create New Event</h2>
+        <a th:href="@{/coordinator/dashboard}" class="btn btn-outline-dark">
+            ← Back to Dashboard
+        </a>
+    </div>
+
+    <!-- FORM CARD -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card create-event-card">
+                <div class="card-body p-4">
+
+                    <form th:action="@{/coordinator/save-event}"
+                          th:object="${event}"
+                          method="post">
+
+                        <!-- TITLE -->
+                        <div class="mb-3">
+                            <label class="form-label">Event Title</label>
+                            <input type="text" th:field="*{title}" class="form-control" required>
+                        </div>
+
+                        <!-- DESCRIPTION -->
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea th:field="*{description}" class="form-control" rows="4"></textarea>
+                        </div>
+
+                        <!-- CATEGORY -->
+                        <div class="mb-3">
+                            <label class="form-label">Category</label>
+                            <input type="text" th:field="*{category}" class="form-control">
+                        </div>
+
+                        <!-- DATE & TIME -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Date</label>
+                                <input type="date" th:field="*{date}" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Time</label>
+                                <input type="time" th:field="*{time}" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- VENUE -->
+                        <div class="mb-3">
+                            <label class="form-label">Venue</label>
+                            <input type="text" th:field="*{venue}" class="form-control" required>
+                        </div>
+
+                        <!-- CAPACITY -->
+                        <div class="mb-4">
+                            <label class="form-label">Capacity</label>
+                            <input type="number" th:field="*{capacity}" class="form-control" min="1">
+                        </div>
+
+                        <!-- ACTION BUTTONS -->
+                        <div class="d-flex gap-3">
+                            <button type="submit" class="btn btn-create w-100">
+                                Create Event
+                            </button>
+                            <a th:href="@{/coordinator/dashboard}"
+                               class="btn btn-outline-secondary w-100">
+                                Cancel
+                            </a>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div th:replace="fragments/footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

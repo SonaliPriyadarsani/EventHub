@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>EventHub | Academic Event Management</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<nav class="navbar navbar-expand-lg main-header">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <img src="/images/logo.png" class="logo">
+        </div>
+
+        <div class="ms-auto">
+            <a th:href="@{/register}" class="btn btn-outline-light me-2">Register</a>
+            <a th:href="@{/login}" class="btn btn-primary">Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero container-fluid">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-white">
+                <h1>Academic Event Management System</h1>
+                <p class="mt-3">
+                    EventHub is a centralized platform to manage, organize,
+                    and monitor academic events efficiently within a college campus.
+                </p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="hero-image">
+                     <img src="/images/logo.png" class="hero-image" >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <div class="about-image">
+                  <img src="/images/index/event_1.jpg" class="hero-image" >
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <h2>About EventHub</h2>
+            <p>
+                EventHub simplifies the lifecycle of academic events such as seminars,
+                workshops, conferences, and cultural programs with transparency
+                and structured coordination.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="features container my-5">
+    <h2 class="text-center mb-4">Core Features</h2>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="/images/index/plann.jpg" alt="Role Based Access" >
+                </div>
+                <h5>Role-Based Access</h5>
+                <p>Separate dashboards for Admin, Coordinator, and Students.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="/images/index/reg.jpg" alt="Role Based Access" >
+                </div>
+                <h5>Event Creation</h5>
+                <p>Coordinators manage academic events efficiently.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+                <div class="feature-image">
+                       <img src="/images/index/inreg.jpg" alt="Role Based Access" >
+                </div>
+                <h5>Online Registration</h5>
+                <p>Students can register digitally.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+                <div class="feature-image">
+                      <img src="/images/index/event.jpg" alt="Role Based Access" >
+                </div>
+                <h5>Approval Workflow</h5>
+                <p>Admin verifies and publishes events.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= EVENTS ================= -->
+<section class="events-preview container-fluid my-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Upcoming Academic Events</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="event-card">
+                    <div class="event-image"></div>
+                    <h6>National Level Seminar</h6>
+                    <p>Computer Science Department</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="event-card">
+                    <div class="event-image"></div>
+                    <h6>AI & ML Workshop</h6>
+                    <p>Hands-on Technical Training</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="event-card">
+                    <div class="event-image"></div>
+                    <h6>Cultural Fest</h6>
+                    <p>Inter-College Participation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <h2>Why EventHub?</h2>
+            <ul class="why-list">
+                <li> Eliminates manual paperwork</li>
+                <li> Centralized event tracking</li>
+                <li> Secure authentication</li>
+                <li> Improved student engagement</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <div class="why-image" >
+               <img src="/images/index/why.jpg" class="why">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    © 2026 EventHub – Academic Event Management System
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

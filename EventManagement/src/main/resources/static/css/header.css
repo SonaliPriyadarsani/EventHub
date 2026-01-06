@@ -1,0 +1,60 @@
+@charset "ISO-8859-1";
+/* ================= HEADER ================= */
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    height: 40px;
+    width: 100px;
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #38bdf8;
+}
+
+.logout-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: #ef4444;
+    color: white !important;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}

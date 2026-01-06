@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+</head>
+<body>
+
+<nav class="main-navbar">
+    <div class="nav-left">
+        <img src="/images/logo.png" alt="Logo" class="nav-logo">
+    </div>
+
+    <ul class="nav-menu">
+        <li><a th:href="@{/}">Home</a></li>
+
+        <li th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+            <a th:href="@{/admin/dashboard}">Admin</a>
+        </li>
+
+        <li th:if="${#authorization.expression('hasRole(''COORDINATOR'')')}">
+            <a th:href="@{/coordinator/dashboard}">Coordinator</a>
+        </li>
+
+        <li th:if="${#authorization.expression('hasRole(''STUDENT'')')}">
+            <a th:href="@{/student/dashboard}">Student</a>
+        </li>
+
+        <li>
+            <a th:href="@{/logout}" class="logout-btn">Logout</a>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>
